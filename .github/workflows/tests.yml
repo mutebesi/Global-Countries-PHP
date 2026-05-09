@@ -34,4 +34,4 @@ jobs:
         run: php scripts/build.php
 
       - name: Execute tests
-        run: vendor/bin/phpunit
+        run: php vendor/bin/phpunit
