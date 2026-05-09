@@ -1,0 +1,42 @@
+{
+    "name": "mutebesi/globalcountries",
+    "description": "The best and most complete country information package for the PHP ecosystem.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Augustus M. Billy",
+            "email": "ceo@eanso.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10",
+        "orchestra/testbench": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GlobalCountries\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GlobalCountries\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GlobalCountries\\Laravel\\GlobalCountriesServiceProvider"
+            ],
+            "aliases": {
+                "Countries": "GlobalCountries\\Laravel\\Facades\\Countries"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
